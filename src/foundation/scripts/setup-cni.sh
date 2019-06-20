@@ -7,7 +7,7 @@ if [ -f "$HOME/.bashrc" ]; then
   source "$HOME/.bashrc"
 fi
 
-CLUSTER_IP=${1:-172.16.1.136} # Align with the value in our K8s setup script
+CLUSTER_IP=${1:-10.96.1.136} # Align with the value in our K8s setup script
 POD_NETWORK_CIDR=${2:-192.168.0.0/16}
 
 # Install the Etcd Database
