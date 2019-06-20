@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# This script builds the olt-service docker image
+set -o errexit
+set -o xtrace
+
+#cd $OLT-SERVICE_PATH
+
+#building olt-service docker image
+docker build -t iecedge/volt-synchronizer_arm64:2.1.14 -f Dockerfile.synchronizer .

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# This script builds the fabric-crossconnect docker image
+set -o errexit
+set -o xtrace
+
+#cd $FABRIC-CROSSCONNECT_PATH
+
+#building fabric-crossconnect docker image
+docker build -t iecedge/fabric-crossconnect-synchronizer_arm64:1.1.4 -f Dockerfile.synchronizer .

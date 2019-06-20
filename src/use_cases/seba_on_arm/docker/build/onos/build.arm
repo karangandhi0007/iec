@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# This script builds the onos docker image
+set -o errexit
+set -o xtrace
+
+#cd $ONOS_PATH
+
+#building onos docker image
+docker build -t iecedge/onos_arm64:v1.13.5 .

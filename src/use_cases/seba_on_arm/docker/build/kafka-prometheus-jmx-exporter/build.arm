@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# This script builds the kafka-prometheus-jmx docker image
+set -o errexit
+set -o xtrace
+
+#cd $KAFKA-PROMETHEUS-JMX_PATH
+
+#Build Docker Image
+cd kafka
+docker build -t iecedge/kafka-prometheus-jmx-exporter_arm64:misc-dockerfiles .

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# This script builds the rcord-synchronizer docker image
+set -o errexit
+set -o xtrace
+
+#cd $RCORD-SYNCHRONIZER _PATH
+
+#building rcord-synchronizer docker image
+docker build -t iecedge/rcord-synchronizer_arm64:1.0.8 -f Dockerfile.synchronizer .

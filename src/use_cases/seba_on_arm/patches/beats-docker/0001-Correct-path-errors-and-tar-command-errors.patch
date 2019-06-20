@@ -1,0 +1,30 @@
+From f13d46ea72f5e0d9e8a43a10b19b9914ece25d02 Mon Sep 17 00:00:00 2001
+From: jialv01 <Jianlin.Lv@arm.com>
+Date: Mon, 15 Apr 2019 21:29:50 +0800
+Subject: [PATCH] Correct path errors and tar command errors
+
+Correct path errors and tar command errors
+
+Signed-off-by: jialv01 <Jianlin.Lv@arm.com>
+---
+ templates/Dockerfile.j2 | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/templates/Dockerfile.j2 b/templates/Dockerfile.j2
+index 9cdcb4a..31ed20b 100644
+--- a/templates/Dockerfile.j2
++++ b/templates/Dockerfile.j2
+@@ -24,8 +24,8 @@ FROM centos:7
+ 
+ RUN yum update -y && yum install -y curl && yum clean all
+ 
+-COPY --from=golang /go/src/github.com/alexandruavadanii/beats/{{ beat }}/build/distributions/{{ beat }}-{{ elastic_version }}-linux-arm64.tar.gz /tmp
+-RUN tar zxf /tmp/FIXME -C /tmp && \
++COPY --from=golang /go/src/github.com/elastic/beats/{{ beat }}/build/distributions/{{ beat }}-{{ elastic_version }}-linux-arm64.tar.gz /tmp
++RUN tar zxf /tmp/{{ beat }}-{{ elastic_version }}-linux-arm64.tar.gz -C /tmp && \
+     mv /tmp/{{ beat }}-{{ elastic_version }}-linux-arm64 {{ beat_home }} && \
+     rm /tmp/{{ beat }}-{{ elastic_version }}-linux-arm64.tar.gz
+ 
+-- 
+2.17.1
+

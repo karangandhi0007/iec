@@ -1,0 +1,26 @@
+From 0d93a605f2a8dc34ce4040e5f34ae68d636fce8b Mon Sep 17 00:00:00 2001
+From: jialv01 <Jianlin.Lv@arm.com>
+Date: Wed, 27 Mar 2019 15:25:58 +0800
+Subject: [PATCH] modify Makefile for aarch64 support
+
+Signed-off-by: jialv01 <Jianlin.Lv@arm.com>
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index e2ba788..d44171c 100644
+--- a/Makefile
++++ b/Makefile
+@@ -55,7 +55,7 @@ release: promu github-release
+ 
+ promu:
+ 	@GOOS=$(shell uname -s | tr A-Z a-z) \
+-		GOARCH=$(subst x86_64,amd64,$(patsubst i%86,386,$(shell uname -m))) \
++		GOARCH=$(subst aarch64,arm64,$(subst x86_64,amd64,$(patsubst i%86,386,$(shell uname -m)))) \
+ 		$(GO) get -u github.com/prometheus/promu
+ 
+ github-release:
+-- 
+2.17.1
+

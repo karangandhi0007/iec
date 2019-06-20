@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# This script builds the onos-service docker image
+set -o errexit
+set -o xtrace
+
+#cd $ONOS-SERVICE_PATH
+
+#building onos-service docker image
+docker build -f Dockerfile.synchronizer -t iecedge/onos-synchronizer_arm64:2.0.7 .

@@ -1,0 +1,27 @@
+From 75878a2e20a53ec658c98d538c0f47dd9674e437 Mon Sep 17 00:00:00 2001
+From: jialv01 <Jianlin.Lv@arm.com>
+Date: Fri, 10 May 2019 17:43:38 +0800
+Subject: [PATCH] pin pynacl to 1.1.2 ,fixed issue of pwhash_scrypt failing on
+ aarch64
+
+Signed-off-by: jialv01 <Jianlin.Lv@arm.com>
+---
+ src/test/cord-api/Dockerfile.k8s-api-tester | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/test/cord-api/Dockerfile.k8s-api-tester b/src/test/cord-api/Dockerfile.k8s-api-tester
+index d79dcb6..206a3a8 100644
+--- a/src/test/cord-api/Dockerfile.k8s-api-tester
++++ b/src/test/cord-api/Dockerfile.k8s-api-tester
+@@ -19,7 +19,7 @@
+ FROM python:2.7
+ 
+ RUN pip install httpie robotframework robotframework-requests pexpect \
+-     robotframework-sshlibrary robotframework-httplibrary robotframework-kafkalibrary pygments pyyaml tinydb && \
++     robotframework-sshlibrary robotframework-httplibrary robotframework-kafkalibrary pygments pyyaml tinydb pynacl==1.1.2 && \
+     pip install -U requests && rm -rf /var/lib/apt/lists/*
+ 
+ RUN  mkdir -p /src/cord-api
+-- 
+2.17.1
+

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# This script builds the fluentd-elasticsearch docker image
+set -o errexit
+set -o xtrace
+
+#cd $FLUENTD-ELASTICSEARCH_PATH
+
+#building fluentd-elasticsearch docker image
+cd ./cluster/addons/fluentd-elasticsearch/fluentd-es-image
+make build
+docker tag akrainoenea/fluentd-elasticsearch:v2.3.1 iecedge/fluentd-elasticsearch_arm64:v2.3.1

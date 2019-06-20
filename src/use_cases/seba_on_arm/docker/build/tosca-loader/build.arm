@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# This script builds the tosca-loader docker image
+set -o errexit
+set -o xtrace
+
+#cd $TOSCA-LOADER_PATH
+
+#building tosca-loader docker image
+cd loader/
+docker build -f Dockerfile.tosca-loader  -t iecedge/tosca-loader_arm64:1.1.5 .

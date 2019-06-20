@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# This script builds the logstash-docker docker image
+set -o errexit
+set -o xtrace
+
+#cd $LOGSTASH-DOCKER_PATH
+
+#building logstash-docker docker image
+make
+docker tag docker.elastic.co/logstash/logstash-oss:6.4.2  iecedge/logstash-oss_arm64:6.4.2

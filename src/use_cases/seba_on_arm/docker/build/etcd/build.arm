@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# This script builds the etcd docker image
+set -o errexit
+set -o xtrace
+
+#cd $ETCD_PATH
+
+#building etcd docker image
+./scripts/build-docker v3.3.10
+docker tag quay.io/coreos/etcd:v3.3.10-arm64 iecedge/etcd_arm64:v3.3.10

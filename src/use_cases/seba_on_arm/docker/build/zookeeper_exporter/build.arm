@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# This script builds the zookeeper_exporter docker image
+set -o errexit
+set -o xtrace
+
+#cd $ZOOKEEPER_EXPORTER_PATH
+
+#Build Docker Image
+docker build -t iecedge/zookeeper-exporter_arm64:master .

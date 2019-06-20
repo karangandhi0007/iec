@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# This script builds the k8szk docker image
+set -o errexit
+set -o xtrace
+
+#cd $K8SZK_PATH
+
+#Build Docker Image
+cd statefulsets/zookeeper/
+docker build -t iecedge/k8szk_arm64:v3 .

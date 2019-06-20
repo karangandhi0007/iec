@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# This script builds the fabric docker image
+set -o errexit
+set -o xtrace
+
+#cd $FABRIC_PATH
+
+#building fabric docker image
+docker build -t iecedge/fabric-synchronizer_arm64:2.1.6 -f Dockerfile.synchronizer .

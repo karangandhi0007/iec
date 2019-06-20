@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# This script builds the kibana-docker docker image
+set -o errexit
+set -o xtrace
+
+#cd $KIBANA-DOCKER_PATH
+
+#building kibana-docker docker image
+make
+docker tag docker.elastic.co/kibana/kibana-oss:6.4.2  iecedge/kibana-oss_arm64:6.4.2

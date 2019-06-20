@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# This script builds the elasticsearch-docker docker image
+set -o errexit
+set -o xtrace
+
+#cd $ELASTICSEARCH-DOCKER_PATH
+
+#building elasticsearch-docker docker image
+make
+docker tag docker.elastic.co/elasticsearch/elasticsearch-oss:6.4.2  iecedge/elasticsearch-oss_arm64:6.4.2

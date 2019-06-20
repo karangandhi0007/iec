@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# This script builds the filebeat-oss docker image
+set -o errexit
+set -o xtrace
+
+#cd $BEATS-DOCKER_PATH
+
+#building filebeat-oss docker image
+IMAGE_TAG=akrainoenea/filebeat ELASTIC_VERSION=6.4.2 IMAGE_FLAVORS=oss DEFAULT_IMAGE_FLAVOR=oss make filebeat
+docker tag docker.elastic.co/beats/filebeat-oss:6.4.2 iecedge/filebeat-oss_arm64:6.4.2

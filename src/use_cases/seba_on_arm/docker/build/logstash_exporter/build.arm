@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# This script builds the logstash_exporter docker image
+set -o errexit
+set -o xtrace
+
+#cd $LOGSTASH-EXPORTER_PATH
+
+#building logstash_exporter docker image
+docker build -t iecedge/logstash_explorer_arm64:v0.1.2 .

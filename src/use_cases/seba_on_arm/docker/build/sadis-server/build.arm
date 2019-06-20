@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# This script builds the sadis-server docker image
+set -o errexit
+set -o xtrace
+
+#cd $SADIS-SERVER_PATH
+
+#building sadis-server docker image
+docker build -t iecedge/sadis-server_arm64:1.0.1 .

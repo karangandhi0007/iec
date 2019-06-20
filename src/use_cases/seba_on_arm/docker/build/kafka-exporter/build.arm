@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# This script builds the kafka-exporter binaries and docker image
+set -o errexit
+set -o xtrace
+
+#cd $KAFKA-EXPORTER_PATH
+
+#Build Binary
+make
+#Build Docker Image
+make docker
+docker tag kafka-exporter:master  iecedge/kafka-exporter_arm64:master

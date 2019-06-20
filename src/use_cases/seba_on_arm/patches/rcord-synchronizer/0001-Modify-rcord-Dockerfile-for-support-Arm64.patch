@@ -1,0 +1,26 @@
+From 4485e25f152b18be11cbdc00287a9ab2146db50c Mon Sep 17 00:00:00 2001
+From: jialv01 <Jianlin.Lv@arm.com>
+Date: Wed, 3 Apr 2019 17:03:56 +0800
+Subject: [PATCH] Modify  rcord Dockerfile for support Arm64
+
+Signed-off-by: jialv01 <Jianlin.Lv@arm.com>
+---
+ Dockerfile.synchronizer | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Dockerfile.synchronizer b/Dockerfile.synchronizer
+index c84eab6..9509770 100644
+--- a/Dockerfile.synchronizer
++++ b/Dockerfile.synchronizer
+@@ -16,7 +16,7 @@
+ # docker build -t xosproject/rcord-synchronizer:candidate -f Dockerfile.synchronizer .
+ 
+ # xosproject/rcord-synchronizer
+-FROM xosproject/xos-synchronizer-base:2.1.25
++FROM cachengo/xos-synchronizer-base:2.1.38
+ 
+ COPY xos/synchronizer /opt/xos/synchronizers/rcord
+ COPY VERSION /opt/xos/synchronizers/rcord/
+-- 
+2.17.1
+

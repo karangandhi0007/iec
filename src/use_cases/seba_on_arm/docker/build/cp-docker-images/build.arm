@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# This script builds the cp-kafka docker image
+
+#cd $CP-DOCKER-IMAGES_PATH
+
+set -o errexit
+set -o xtrace
+
+# Building the Images
+make build-debian
+docker tag confluentinc/cp-kafka:4.1.2  iecedge/cp-kafka_arm64:4.1.2

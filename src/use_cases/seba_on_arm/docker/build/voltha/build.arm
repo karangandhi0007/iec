@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# This script builds the voltha docker images
+set -o errexit
+set -o xtrace
+
+#cd $VOLTHA_PATH
+
+#building voltha docker images
+VOLTHA_BUILD=docker make seba
+docker tag voltha-voltha:latest iecedge/voltha-voltha_arm64:1.6.0
+docker tag voltha-cli:latest iecedge/voltha-cli_arm64:1.6.0
+docker tag voltha-ofagent:latest iecedge/voltha-ofagent_arm64:1.6.0
+docker tag voltha-netconf:latest iecedge/voltha-netconf_arm64:1.6.0
+docker tag voltha-envoy:latest iecedge/voltha-envoy_arm64:1.6.0
+docker tag voltha-alarm-generator:latest iecedge/voltha-alarm-generator_arm64:1.6.0
+docker tag voltha-ponsim:latest iecedge/voltha-ponsim_arm64:1.6.0

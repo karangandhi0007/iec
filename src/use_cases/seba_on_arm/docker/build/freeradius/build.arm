@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# This script builds the freeradius docker image
+set -o errexit
+set -o xtrace
+
+#cd $FREERADIUS_PATH
+
+#building freeradius docker image
+docker build -t iecedge/freeradius_arm64:2.2.8 .

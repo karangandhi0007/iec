@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# This script builds the kubernetes-synchronizer docker image
+set -o errexit
+set -o xtrace
+
+#cd $KUBERNETES-SYNCHRONIZER _PATH
+
+#building kubernetes-synchronizer docker image
+docker build -t iecedge/kubernetes-synchronizer_arm64:1.1.3 -f Dockerfile.synchronizer .

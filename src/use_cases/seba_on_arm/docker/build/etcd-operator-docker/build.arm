@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# This script builds the etcd-operator docker images
+set -o errexit
+set -o xtrace
+
+#cd $ETCD-OPERATOR-DOCKER_PATH
+
+#building etcd-operator docker images
+docker build -t iecedge/etcd-operator_arm64:v0.9.2 .

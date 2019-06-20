@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# This script builds the jmx-prometheus-exporter docker image
+set -o errexit
+set -o xtrace
+
+#cd $JMX-PROMETHEUS-EXPORTER_PATH
+
+#Build Docker Image
+docker build -t iecedge/jmx-prometheus-exporter_arm64:master .
