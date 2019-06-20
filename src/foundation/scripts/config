@@ -4,16 +4,16 @@
 # Host user which can log into master and each worker nodes
 HOST_USER=${HOST_USER:-iec}
 
-REPO_URL="https://gerrit.akraino.org/r/iec"
+REPO_URL="https://github.com/karangandhi0007/iec.git"
 #log file
 LOG_FILE="kubeadm.log"
 
 
 # Master node IP address
-K8S_MASTER_IP="10.169.36.152"
+K8S_MASTER_IP="192.168.137.11"
 
 # HOST_USER's password on Master node
-K8S_MASTERPW="123456"
+K8S_MASTERPW="1"
 
 ######################################################
 #
@@ -23,7 +23,8 @@ K8S_MASTERPW="123456"
 #
 ######################################################
 K8S_WORKER_GROUP=(
-"10.169.40.106,123456"
+"192.168.137.12,1",
+"192.168.137.13,1"
 )
 
 
