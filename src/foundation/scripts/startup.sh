@@ -56,7 +56,7 @@ deploy_k8s () {
     sshpass -p ${passwd} ssh -o StrictHostKeyChecking=no ${HOST_USER}@${ip_addr} ${INSTALL_SOFTWARE}
     sshpass -p ${passwd} ssh -o StrictHostKeyChecking=no ${HOST_USER}@${ip_addr} "echo \"sudo ${KUBEADM_JOIN_CMD}\" >> ./iec/src/foundation/scripts/k8s_worker.sh"
     sleep 2
-    sshpass -p ${passwd} ssh -o StrictHostKeyChecking=no ${HOST_USER}@${ip_addr} "swapon -a"
+    sshpass -p ${passwd} ssh -o StrictHostKeyChecking=no ${HOST_USER}@${ip_addr} "sudo swapon -a"
     sshpass -p ${passwd} ssh -o StrictHostKeyChecking=no ${HOST_USER}@${ip_addr} ${SETUP_WORKER}
 
   done
