@@ -7,8 +7,8 @@ if [ -f "$HOME/.bashrc" ]; then
   source "$HOME/.bashrc"
 fi
 
-CLUSTER_IP=${1:-10.96.1.136} # Align with the value in our K8s setup script
-POD_NETWORK_CIDR=${2:-192.168.0.0/16}
+CLUSTER_IP=${1:-172.16.1.136} # Align with the value in our K8s setup script
+POD_NETWORK_CIDR=${2:-194.168.0.0/16}
 
 # Install the Etcd Database
 if [ "$(uname -m)" == 'aarch64' ]; then

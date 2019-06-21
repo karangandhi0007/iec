@@ -2,8 +2,8 @@
 
 # For host setup as Kubernetes master
 MGMT_IP=$1
-POD_NETWORK_CIDR=${2:-192.168.0.0/16}
-SERVICE_CIDR=${3:-10.96.0.0/12}
+POD_NETWORK_CIDR=${2:-194.168.0.0/16}
+SERVICE_CIDR=${3:-172.16.1.0/24}
 
 if [ -z "${MGMT_IP}" ]; then
   echo "Please specify a management IP!"
