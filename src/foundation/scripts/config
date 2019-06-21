@@ -4,7 +4,7 @@
 # Host user which can log into master and each worker nodes
 HOST_USER=${HOST_USER:-iec}
 
-REPO_URL="https://gerrit.akraino.org/r/iec"
+REPO_URL="https://github.com/karangandhi0007/iec.git"
 #log file
 LOG_FILE="kubeadm.log"
 
